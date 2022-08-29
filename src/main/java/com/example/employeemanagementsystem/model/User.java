@@ -2,7 +2,7 @@ package com.example.employeemanagementsystem.model;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 @Document(collection = "user")
-public class User {
+public class User  {
     @MongoId
     private String username;
     private String password;

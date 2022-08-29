@@ -26,7 +26,7 @@ public class UserController {
         }
         return user;
     }
-    @PostMapping("/profile")
+    @PostMapping("/login")
     public User getProfile(@RequestBody UserDto userDto) {
         User user = userServiceImpl.getUserByUsername(userDto.getUsername());
         if (userDto == null || (!userDto.getPassword().equals(user.getPassword())))
