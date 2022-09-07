@@ -8,7 +8,6 @@ import javax.sql.DataSource;
 
 
 @SpringBootApplication(exclude=DataSourceAutoConfiguration.class)
-//@EnableAutoConfiguration(exclude={MongoAutoConfiguration.class})
 public class EmployeeManagementSystemApplication {
 
 
