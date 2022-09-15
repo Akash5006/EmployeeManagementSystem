@@ -1,4 +1,5 @@
 package com.example.employeemanagementsystem.dto;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 @Component
 public class EmployeeDto {
@@ -36,6 +37,17 @@ public class EmployeeDto {
     }
     public void setManager(String manager) {
         this.manager = manager;
+    }
+
+    public EmployeeDto(){
+
+    }
+public EmployeeDto(int empId, String empName, String empMail, String department, String manager) {
+        this.empId=empId;
+        this.empName=empName;
+        this.empMail=empMail;
+        this.department=department;
+        this.manager=manager;
     }
     @Override
     public String toString() {

@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Autowired
     UserRepo userRepo;
     @Override
-    public void saveUser(UserDto userDto) throws EmsException401 {
+    public User saveUser(UserDto userDto) throws EmsException401 {
         if (userDto.getUsername().isEmpty() || userDto.getPassword().isEmpty()) {
             throw new EmsException401(ErrorCode.USER_NOT_VALID);
         }
@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         user.setUsername(userDto.getUsername());
         user.setPassword(userDto.getPassword());
         userRepo.save(user);
+        return user;
     }
     @Override
     public User getUserByUsername(String username) {
